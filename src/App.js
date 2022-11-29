@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { RandomButton } from './RandomButton';
+import React, { useState } from 'react';
 
 function App() {
+  const [task, setTask] = useState('No task selected')
+
+  const tasks = ['ATGT', 'Domain Adaptation', 'Codecademy - Data Science', 'Codecademy - Fullstack', 'TNMT']
+
+  const selectTask = () => {
+    const idx = Math.floor(Math.random() * tasks.length)
+    setTask(tasks[idx])
+  }
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>
+          Pomodoro Task Scheduler
+        </h1>
       </header>
+
+      <RandomButton onClick={selectTask}/>
+      <h2>{task}</h2>
     </div>
   );
 }
