@@ -5,7 +5,18 @@ import React, { useState } from 'react';
 function App() {
   const [task, setTask] = useState('No task selected')
 
-  const tasks = ['ATGT', 'Domain Adaptation', 'Codecademy - Data Science', 'Codecademy - Fullstack', 'TNMT']
+  const tasks = ['FastAPI', 
+                'Domain Adaptation - Slides', 
+                'Domain Adaptation - videos', 
+                'Domain Adaptation - Code', 
+                'Transformer', 
+                'Codecademy - Data Science', 
+                'Codecademy - Fullstack', 
+                'TNMT - Frontend',
+                'TNMT - Backend',
+                'Book review',
+                'Short story'
+              ]
 
   const selectTask = () => {
     const idx = Math.floor(Math.random() * tasks.length)
