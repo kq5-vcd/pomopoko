@@ -5,11 +5,10 @@ import React, { useState } from 'react';
 function App() {
   const [task, setTask] = useState('No task selected')
 
-  const tasks = ['FastAPI', 
-                'Domain Adaptation - Slides', 
-                'Domain Adaptation - videos', 
-                'Domain Adaptation - Code', 
-                'Transformer', 
+  const tasks = ['IC - Face Embedding', 
+                'VietOCR', 
+                'ABINET', 
+                'FastAI', 
                 'Codecademy - Data Science', 
                 'Codecademy - Fullstack', 
                 'TNMT - Frontend',
