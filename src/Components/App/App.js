@@ -46,8 +46,10 @@ function App() {
         </h1>
       </header>
 
-      <RandomButton onClick={selectTask}/>
-      <h2>{selectedTask}</h2>
+      <div className='task-choice'>
+        <RandomButton onClick={selectTask}/>
+        <h2>{selectedTask}</h2>
+      </div>
     </div>
   );
 }
