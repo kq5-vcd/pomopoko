@@ -1,4 +1,3 @@
-import React from "react";
 import './RandomButton.css';
 
 export const RandomButton = ({onClick}) => {

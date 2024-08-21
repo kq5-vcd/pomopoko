@@ -1,7 +1,13 @@
-import './App.css';
-import { RandomButton } from '../RandomButton/RandomButton';
 import React, { useState } from 'react';
+
 import { DB } from '../../Utils/DB';
+
+import { RandomButton } from '../RandomButton/RandomButton';
+import { Timer } from '../Timer/Timer';
+import { TaskTable } from '../TaskTable/TaskTable';
+
+import './App.css';
+
 
 function App() {
   const [selectedTask, setSelectedTask] = useState('No task selected')
@@ -46,9 +52,15 @@ function App() {
         </h1>
       </header>
 
+      <Timer/>
+
       <div className='task-choice'>
-        <RandomButton onClick={selectTask}/>
         <h2>{selectedTask}</h2>
+        <RandomButton onClick={selectTask}/>
+      </div>
+
+      <div>
+        <TaskTable/>
       </div>
     </div>
   );
